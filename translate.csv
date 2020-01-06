@@ -1,0 +1,30 @@
+﻿No,艦名,艦種,画像URL,R,G,B,背景色分類,実値,例外判定
+10,扶桑,戦艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E6%89%B6%E6%A1%91/::ref/026.jpg?rev=6f355dd0c52a8fc22ff7644514692d32&t=20130501112805,74.045,80.115,88.5525,6,2,●
+11,山城,戦艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E5%B1%B1%E5%9F%8E/::ref/027.jpg?rev=a63fc99dcbe9a0d3ad30f7266cebd80c&t=20130501203847,141.6625,148.75,156.5,5,2,●
+23,Bismarck,戦艦,https://cdn.wikiwiki.jp/to/w/kancolle/Bismarck/::ref/Bismarck.jpg?rev=7d53edd9760d0066b8fc1132d010f242&t=20140314214117,114.3,100.83,90.9475,6,4,●
+24,Bismarck改,戦艦,https://cdn.wikiwiki.jp/to/w/kancolle/Bismarck%E6%94%B9/::ref/Bismarck%E6%94%B9.png?rev=5cbc5175e7c9b5cd109cfd14835d1800&t=20140315005505,113.5225,100.9075,91.465,6,4,●
+25,Bismarck zwei,戦艦,https://cdn.wikiwiki.jp/to/w/kancolle/Bismarck%20zwei/::ref/Bismarck_zwei.png?rev=20459805f439708e353060e5071b2caf&t=20140430190606,111.795,102.035,87.015,6,4,●
+41,扶桑改,航空戦艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E6%89%B6%E6%A1%91%E6%94%B9/::ref/026k.png?rev=4a0393059d285750bfa748bf10d72f54&t=20130818155149,97.4075,94.8625,83.6425,6,3,●
+75,Intrepid改,正規空母,https://cdn.wikiwiki.jp/to/w/kancolle/Intrepid%E6%94%B9/::ref/349b.jpg?rev=98f854cf204ca4bddd3b08fd92678cec&t=20180227193832,196.5375,178.47,167.51,5,4,●
+88,祥鳳,軽空母,https://cdn.wikiwiki.jp/to/w/kancolle/%E7%A5%A5%E9%B3%B3/::ref/094.jpg?rev=713c73854b4b61c50055a5e6b5a74de9&t=20130502141514,45.94,41.78,37.51,6,2,●
+114,加古,重巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E5%8A%A0%E5%8F%A4/::ref/053.jpg?rev=262073fc0e05c5c59d59323d4cafce66&t=20130430131818,156.7625,170.51,200.5125,5,1,●
+129,摩耶,重巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E6%91%A9%E8%80%B6/::ref/061.png?rev=6668474f2e383a31b2ffd7431ca3fbfd&t=20131015103109,168.45,180.2825,200.7125,5,1,●
+130,摩耶改二,重巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E6%91%A9%E8%80%B6%E6%94%B9%E4%BA%8C/::ref/228.jpg?rev=5671c91db28789febb8345bdda1c03b4&t=20150313170358,191.305,185.8225,187.7475,5,4,●
+138,筑摩,重巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E7%AD%91%E6%91%A9/::ref/064.JPG?rev=a0ae7024184689bd583f31ad553d23eb&t=20130502202737,194.62,201.4,207.7675,3,2,●
+162,大井,軽巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E5%A4%A7%E4%BA%95/::ref/019.jpg?rev=77b189033eaed6f03a6d6508e7efc165&t=20130426132952,216.5575,210.71,147.245,0,3,●
+164,長良,軽巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E9%95%B7%E8%89%AF/::ref/042.jpg?rev=13c190df6bff561540102e979df31351&t=20130425033656,194.725,200.305,206.685,3,2,●
+177,川内,軽巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E5%B7%9D%E5%86%85/::ref/046.jpg?rev=05db9c5db9a178fa3b6ec19eae6c2892&t=20130426125530,195.7175,201.9075,207.5275,3,2,●
+188,大淀改,軽巡洋艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E5%A4%A7%E6%B7%80%E6%94%B9/::ref/183b.jpg?rev=7e66bb418b1dd51bac59aaa16f62132a&t=20140829164704,206.455,187.94,169.8725,5,4,●
+333,長波改二,駆逐艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E9%95%B7%E6%B3%A2%E6%94%B9%E4%BA%8C/::ref/343.jpg?rev=0a5365eb78134396589948407e0c6817&t=20171227193553,194.695,176.7425,157.33,5,4,●
+388,伊8,潜水艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E4%BC%8A8/::ref/128.jpg?rev=813148367261d421b48b7c020835c132&t=20131102183008,141.2,108.39,118.575,1,3,●
+390,伊26,潜水艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E4%BC%8A26/::ref/i26.png?rev=5c7e7568f4ed76a5f2e7bda6a215a2de&t=20160813010538,156.445,151.6625,146.975,5,2,●
+399,伊8改,潜水空母,https://cdn.wikiwiki.jp/to/w/kancolle/%E4%BC%8A8%E6%94%B9/::ref/128b.jpg?rev=c7eb9bef827dfa976d281e3a55c9950b&t=20131104054400,141.6325,110.0175,120.065,1,4,●
+401,伊26改,潜水空母,https://cdn.wikiwiki.jp/to/w/kancolle/%E4%BC%8A26%E6%94%B9/::ref/%E3%81%8B%E3%82%8F%E3%81%84%E3%81%84....jpg?rev=3de6d812904cf61ae67c0a2efac7d36e&t=20160813182819,182.9975,162.48,128.4425,5,3,●
+414,千代田改,水上機母艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E5%8D%83%E4%BB%A3%E7%94%B0%E6%94%B9/::ref/096.jpg?rev=454b6d00f460b11f8c75a3055929a9da&t=20130504225430,132.6425,164.585,166.6325,5,1,●
+415,千代田甲,水上機母艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E5%8D%83%E4%BB%A3%E7%94%B0%E7%94%B2/::ref/100.jpg?rev=1fda3e4552306f6eb02a12237f321ec0&t=20130504225828,132.6425,164.585,166.6325,5,1,●
+426,神州丸,揚陸艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E7%A5%9E%E5%B7%9E%E4%B8%B8/::ref/421.png?rev=bd2b04165627f306335ac2657de15e92&t=20191130154434,199.7425,189.8825,187.1275,5,4,●
+427,神州丸改,揚陸艦,https://cdn.wikiwiki.jp/to/w/kancolle/%E7%A5%9E%E5%B7%9E%E4%B8%B8%E6%94%B9/::ref/426.png?rev=850be6748a1fe41577115ced68290112&t=20191201095038,197.3975,174.045,147.4425,5,4,●
+433,Bismarck,海外艦,https://cdn.wikiwiki.jp/to/w/kancolle/Bismarck/::ref/Bismarck.jpg?rev=7d53edd9760d0066b8fc1132d010f242&t=20140314214117,114.3,100.83,90.9475,6,4,●
+434,Bismarck改,海外艦,https://cdn.wikiwiki.jp/to/w/kancolle/Bismarck%E6%94%B9/::ref/Bismarck%E6%94%B9.png?rev=5cbc5175e7c9b5cd109cfd14835d1800&t=20140315005505,113.5225,100.9075,91.465,6,4,●
+435,Bismarck zwei,海外艦,https://cdn.wikiwiki.jp/to/w/kancolle/Bismarck%20zwei/::ref/Bismarck_zwei.png?rev=20459805f439708e353060e5071b2caf&t=20140430190606,111.795,102.035,87.015,6,4,●
+473,Intrepid改,海外艦,https://cdn.wikiwiki.jp/to/w/kancolle/Intrepid%E6%94%B9/::ref/349b.jpg?rev=98f854cf204ca4bddd3b08fd92678cec&t=20180227193832,196.5375,178.47,167.51,5,4,●
