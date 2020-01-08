@@ -29,7 +29,6 @@ def TranslateBGClusterToKind(data_set):
             new_v = 3
 
         rr = nr[nr['艦名'] == name]
-        print(rr)
         if len(rr) > 0:
             new_v = rr["実値"].iat[0]
 
@@ -52,7 +51,7 @@ if __name__ == "__main__":
     df["背景色分類"] = y1
 
     # 背景色分類から背景種類に変換する（誤判定修正も行う）
-    wdf = df[["艦名", "背景色分類"]]
+    wdf = df[["艦名", "背景色分類", "実値"]]
     y2 = TranslateBGClusterToKind(wdf)
     df["実値"] = y2
 

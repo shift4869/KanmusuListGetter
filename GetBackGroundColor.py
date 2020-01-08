@@ -5,30 +5,50 @@ import urllib
 import requests
 
 
-def GetBackGroundColor(img_url):
+def GetBackGroundColor(img_url, d=20, new_load_flag=True, bg_save_path="./bg"):
+    # 画像URLチェック
     if img_url == "":
-        return -1
+        return []
 
-    # 画像DLのためにユーザーエージェントを火狐に偽装
-    headers = {
-        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0"
-    }
+    # 画像保存ディレクトリが既にあるか確認する
+    # なければディレクトリ作成
+    if not os.path.exists(bg_save_path):
+        try:
+            os.makedirs(bg_save_path)
+        except Exception:
+            return []
 
-    # 画像DL
-    TARGET_IMG_NAME = "target.jpg"
-    request = urllib.request.Request(img_url, headers=headers)
-    with urllib.request.urlopen(request) as responce:
-        with open(TARGET_IMG_NAME, mode="wb") as fout:
-            fout.write(responce.read())
+    # 画像ファイル名を取得する
+    p = urllib.parse.urlparse(img_url).path
+    img_name = os.path.split(p)[-1]
+    target_img_name = os.path.join(bg_save_path, img_name)
+
+    if new_load_flag or (not os.path.exists(target_img_name)):
+        # 画像DLのためにユーザーエージェントを火狐に偽装
+        headers = {
+            "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0"
+        }
+
+        # 画像DL
+        res = requests.get(img_url, headers=headers)
+        if res.status_code != 200:
+            print(f"img_url request error : http status code = {res.status_code}")
+            return []
+
+        # 画像保存
+        with open(target_img_name, mode="wb") as fout:
+            fout.write(res.content)
 
     # 対象画像読み込み
-    img = cv2.imread(TARGET_IMG_NAME, cv2.IMREAD_COLOR)
+    try:
+        img = cv2.imread(target_img_name, cv2.IMREAD_COLOR)
+    except Exception:
+        return []
 
     # サイズ取得
     height, width, channels = img.shape[:3]
 
     # 対象範囲を切り出し
-    d = 20
     boxFromX = width - d  # 対象範囲開始位置 X座標
     boxFromY = 0  # 対象範囲開始位置 Y座標
     boxToX = width  # 対象範囲終了位置 X座標
@@ -43,7 +63,7 @@ def GetBackGroundColor(img_url):
     g = imgBox.T[1].flatten().mean()
     b = imgBox.T[0].flatten().mean()
 
-    # RGB平均値を取得
+    # RGB平均値を出力
     # print("B: %.2f" % (b))
     # print("G: %.2f" % (g))
     # print("R: %.2f" % (r))
@@ -69,4 +89,5 @@ def GetBackGroundColor(img_url):
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     img_url = "https://cdn.wikiwiki.jp/to/w/kancolle/%E9%87%91%E5%89%9B/::ref/021v2.jpg?rev=a206314e015013d864908f63953e13fd&t=20130924094057"
-    bg_col_info = GetBackGroundColor(img_url)
+    bg_col_info = GetBackGroundColor(img_url, new_load_flag=False)
+    print(bg_col_info)

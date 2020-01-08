@@ -112,3 +112,5 @@ log*.txt*
 *.stackdump
 *.db-journal
 *.vbs
+bg/
+*$*
