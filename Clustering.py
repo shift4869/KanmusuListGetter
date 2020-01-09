@@ -1,16 +1,15 @@
 # coding: utf-8
-import cv2
 import os
 import pandas as pd
-import urllib
-import requests
 
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_samples, silhouette_score
 
+EXCEPT_CLUSTER_NUM = 7
+
 
 # 適切なクラスタ数を求める
-# シルエット値平均が最大となクラスタ数を採用
+# シルエット値平均が最大となるクラスタ数を採用
 def GetClusterNum(data_set):
     k_range = range(2, 9)
 
@@ -36,17 +35,18 @@ def GetClusterNum(data_set):
     return most_suit_sa_k[1]
 
 
-def GetClusterLabel(target_file_name):
+def GetClusterLabel(data_set):
     # RGB値でクラスタリング
-    df = pd.read_csv("result.csv")
-    wdf = df[["R", "G", "B"]]
+    df = data_set[["R", "G", "B"]]
 
-    cluster_num = GetClusterNum(wdf)
+    cluster_num = GetClusterNum(df)
+
+    if cluster_num != EXCEPT_CLUSTER_NUM:
+        raise f"cluster_num is different from EXCEPT_CLUSTER_NUM:{cluster_num}"
 
     model1 = KMeans(n_clusters=cluster_num, random_state=0)
-    model1.fit(wdf)
+    model1.fit(df)
     y1 = model1.labels_
-    # df["背景色分類"] = y1
 
     return y1
 
@@ -54,5 +54,6 @@ def GetClusterLabel(target_file_name):
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     target_file_name = "result.csv"
-    y1 = GetClusterLabel(target_file_name)
+    df = pd.read_csv(target_file_name)
+    y1 = GetClusterLabel(df)
     print(y1)

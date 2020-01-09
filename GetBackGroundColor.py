@@ -31,9 +31,7 @@ def GetBackGroundColor(img_url, d=20, new_load_flag=True, bg_save_path="./bg"):
 
         # 画像DL
         res = requests.get(img_url, headers=headers)
-        if res.status_code != 200:
-            print(f"img_url request error : http status code = {res.status_code}")
-            return []
+        res.raise_for_status()
 
         # 画像保存
         with open(target_img_name, mode="wb") as fout:
@@ -43,7 +41,7 @@ def GetBackGroundColor(img_url, d=20, new_load_flag=True, bg_save_path="./bg"):
     try:
         img = cv2.imread(target_img_name, cv2.IMREAD_COLOR)
     except Exception:
-        return []
+        exit(1)
 
     # サイズ取得
     height, width, channels = img.shape[:3]

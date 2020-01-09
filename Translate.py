@@ -1,9 +1,6 @@
 # coding: utf-8
-import cv2
 import os
 import pandas as pd
-import urllib
-import requests
 import traceback
 
 TRANSLATE_MST_FILE = "translate_mst.csv"
