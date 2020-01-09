@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_samples, silhouette_score
 
+USE_EXCEPT_CLUSTER_NUM_FLAG = True
 EXCEPT_CLUSTER_NUM = 7
 
 
@@ -42,7 +43,10 @@ def GetClusterLabel(data_set):
     cluster_num = GetClusterNum(df)
 
     if cluster_num != EXCEPT_CLUSTER_NUM:
-        raise f"cluster_num is different from EXCEPT_CLUSTER_NUM:{cluster_num}"
+        if USE_EXCEPT_CLUSTER_NUM_FLAG:
+            cluster_num = EXCEPT_CLUSTER_NUM
+        else:
+            raise f"cluster_num is different from EXCEPT_CLUSTER_NUM:{cluster_num}"
 
     model1 = KMeans(n_clusters=cluster_num, random_state=0)
     model1.fit(df)

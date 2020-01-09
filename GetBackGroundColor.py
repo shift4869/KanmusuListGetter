@@ -3,6 +3,7 @@ import cv2
 import os
 import urllib
 import requests
+import traceback
 
 
 def GetBackGroundColor(img_url, d=20, new_load_flag=True, bg_save_path="./bg"):
@@ -12,11 +13,7 @@ def GetBackGroundColor(img_url, d=20, new_load_flag=True, bg_save_path="./bg"):
 
     # 画像保存ディレクトリが既にあるか確認する
     # なければディレクトリ作成
-    if not os.path.exists(bg_save_path):
-        try:
-            os.makedirs(bg_save_path)
-        except Exception:
-            return []
+    os.makedirs(bg_save_path, exist_ok=True)
 
     # 画像ファイル名を取得する
     p = urllib.parse.urlparse(img_url).path
@@ -41,7 +38,8 @@ def GetBackGroundColor(img_url, d=20, new_load_flag=True, bg_save_path="./bg"):
     try:
         img = cv2.imread(target_img_name, cv2.IMREAD_COLOR)
     except Exception:
-        exit(1)
+        traceback.print_exc()
+        return []
 
     # サイズ取得
     height, width, channels = img.shape[:3]

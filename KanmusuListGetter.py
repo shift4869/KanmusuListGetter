@@ -39,6 +39,9 @@ if __name__ == "__main__":
     # 艦名のリストを取得する
     # ["No", "艦名", "艦種", "画像URL", "R", "G", "B"]
     name_list = GetNameList(soup, new_load_flag=BG_DL_FLAG, bg_save_path=BG_SAVE_PATH)
+    if not name_list:
+        print("艦名リスト取得失敗")
+        exit(1)
 
     # RGB値でクラスタリング
     df = pd.DataFrame(name_list, columns=["No", "艦名", "艦種", "画像URL", "R", "G", "B"])
