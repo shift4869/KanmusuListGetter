@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 import os
 import re
+from tqdm import tqdm  # プログレスバー
 
 from GetBackGroundColor import *
 
@@ -31,7 +32,7 @@ def GetNameList(soup, new_load_flag=True, bg_save_path="./bg"):
     exception_index = [15, 16]
     # html構造解析
     div_ie5s = soup.find(id="body").find_all("div", class_="ie5")
-    for div_ie5 in div_ie5s:
+    for div_ie5 in tqdm(div_ie5s):
         trs = div_ie5.table.tbody.find_all("tr")
         for tr in trs:
             tds = tr.find_all("td")
