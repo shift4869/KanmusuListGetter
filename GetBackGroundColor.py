@@ -6,6 +6,8 @@ import requests
 import traceback
 
 
+# img_urlの画像を取得し、背景色を画像解析してRGB値を取得する
+# 解析に失敗した場合は空リストを返す
 def GetBackGroundColor(img_url, d=20, new_load_flag=True, bg_save_path="./bg"):
     # 画像URLチェック
     if img_url == "":
