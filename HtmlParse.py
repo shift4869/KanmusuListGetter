@@ -29,7 +29,7 @@ def GetNameList(soup, new_load_flag=True, bg_save_path="./bg"):
     name_list = []
     kind_index = 0
     i_flag = False
-    exception_index = [16, 17]
+    exception_index = [19, 20]
     # html構造解析
     div_ie5s = soup.find(id="body").find_all("div", class_="h-scrollable")
     for div_ie5 in tqdm(div_ie5s):
