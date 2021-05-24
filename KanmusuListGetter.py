@@ -5,7 +5,7 @@ import pandas as pd
 import requests
 import traceback
 
-from HtmlParse import *
+from GetNameList import *
 from Clustering import *
 from Translate import *
 
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # wikiページを取得してBeautifulSoupのhtml解析準備を行う
     try:
         if WIKI_SOURCE_DL_FLAG:
-            res = requests.get('https://wikiwiki.jp/kancolle/艦娘カード一覧2')
+            res = requests.get("https://wikiwiki.jp/kancolle/艦娘カード一覧2")
             res.raise_for_status()
 
             with open(WIKI_SOURCE_CACHE_FILE, mode="w") as fout:
